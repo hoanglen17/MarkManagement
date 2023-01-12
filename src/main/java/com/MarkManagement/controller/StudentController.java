@@ -55,4 +55,8 @@ public class StudentController {
         String nameStudent = student.getName();
         return studentService.getStudentByName(nameStudent);
     }
+    @GetMapping("/getStudentThan/{AVG}")
+    public List<Student> getStudentThan(@PathVariable("AVG") Integer AVG){
+        return studentService.getStudentThan(AVG);
+    }
 }

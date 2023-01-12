@@ -47,6 +47,10 @@ public class StudentService {
     public List<Student> getStudentByName(String name) {
         return studentRepository.findByName(name);
     }
+
+    public List<Student> getStudentThan(Integer avg) {
+        return studentRepository.findStudentThan(avg);
+    }
 }
 
 
