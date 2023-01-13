@@ -18,7 +18,7 @@ public class StudentService {
         studentRepository.save(student);
     }
 
-    public Student findById(Integer id) {
+    public Student findById(Long id) {
         Student student = studentRepository.findById(id).get();
         return student;
     }
@@ -29,14 +29,14 @@ public class StudentService {
         return students;
     }
 
-    public void deleteById(Integer id) {
+    public void deleteById(Long id) {
         Student student = studentRepository.findById(id).get();
         if(student != null){
             studentRepository.deleteById(id);
         }
     }
 
-    public void updateStudent(Integer id, Student student) {
+    public void updateStudent(Long id, Student student) {
         Student studentFromDB = studentRepository.findById(id).get();
         if(studentFromDB != null){
             studentFromDB.setName(student.getName());

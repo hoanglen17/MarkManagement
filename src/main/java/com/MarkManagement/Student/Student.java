@@ -15,7 +15,7 @@ public class Student{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-    private Integer id;
+    private Long id;
     @Column
     private String name;
     @Column
@@ -25,11 +25,11 @@ public class Student{
     @Column
     private Integer chemistry;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
